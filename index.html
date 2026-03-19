@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>縁結び祈祷師 黒華｜10秒復縁診断</title>
+  <meta name="description" content="たった10秒であの人の本音が分かる。縁結び祈祷師・黒華の無料復縁診断。2,800名以上の実績。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-purple: #0a0612;
+      --purple: #1a0a2e;
+      --accent-purple: #6b21a8;
+      --gold: #d4a853;
+      --gold-light: #f0d68a;
+      --text: #e8dff0;
+      --text-dim: #a89bbc;
+      --line-green: #06C755;
+      --line-green-hover: #05b04c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      background: var(--deep-purple);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    .serif { font-family: 'Noto Serif JP', serif; }
+
+    /* ===== ヒーロー ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(107,33,168,0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(107,33,168,0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(212,168,83,0.08) 0%, transparent 40%);
+      z-index: 0;
+    }
+
+    .hero > * { position: relative; z-index: 1; }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 20px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .hero h1 .gold { color: var(--gold-light); }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      margin-bottom: 40px;
+      line-height: 1.9;
+    }
+
+    /* ===== CTAボタン ===== */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--line-green);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 18px 36px;
+      border-radius: 60px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 24px rgba(6,199,85,0.3);
+      max-width: 360px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .cta-btn:hover {
+      background: var(--line-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 32px rgba(6,199,85,0.4);
+    }
+
+    .cta-btn svg { width: 24px; height: 24px; flex-shrink: 0; }
+
+    .cta-note {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-top: 12px;
+    }
+
+    /* ===== セクション共通 ===== */
+    section {
+      padding: 72px 20px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.25rem, 4vw, 1.6rem);
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .section-title .gold { color: var(--gold-light); }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 40px;
+    }
+
+    /* ===== 悩みセクション ===== */
+    .pain-section {
+      background: linear-gradient(180deg, transparent, rgba(107,33,168,0.08) 50%, transparent);
+    }
+
+    .pain-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .pain-list li::before {
+      content: '✦';
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .pain-question {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 32px;
+      line-height: 1.9;
+    }
+
+    /* ===== 実績 ===== */
+    .stats {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background: rgba(107,33,168,0.12);
+      border: 1px solid rgba(107,33,168,0.25);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .stat-number {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    /* ===== お客様の声 ===== */
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .testimonial {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
+
+    .testimonial-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      color: var(--gold);
+      border: 1px solid rgba(212,168,83,0.3);
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial p {
+      font-size: 0.95rem;
+      line-height: 1.9;
+    }
+
+    .testimonial-attr {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 12px;
+    }
+
+    /* ===== プロフィール ===== */
+    .profile-section {
+      text-align: center;
+    }
+
+    .profile-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-purple), rgba(212,168,83,0.4));
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2rem;
+      color: #fff;
+      border: 2px solid rgba(212,168,83,0.3);
+    }
+
+    .profile-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .profile-title {
+      font-size: 0.85rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .profile-text {
+      font-size: 0.95rem;
+      line-height: 2;
+      color: var(--text-dim);
+    }
+
+    .profile-quote {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      color: var(--gold-light);
+      margin-top: 24px;
+      line-height: 1.8;
+    }
+
+    /* ===== 鑑定内容 ===== */
+    .reading-items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .reading-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(107,33,168,0.1);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .reading-item-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-purple), rgba(212,168,83,0.3));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+
+    .reading-item-text {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .free-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--deep-purple);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 24px;
+      border-radius: 30px;
+      margin: 0 auto;
+      display: block;
+      width: fit-content;
+    }
+
+    /* ===== 最終CTA ===== */
+    .final-cta {
+      text-align: center;
+      padding: 80px 20px 100px;
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 80%, rgba(107,33,168,0.2) 0%, transparent 60%);
+      z-index: 0;
+    }
+
+    .final-cta > * { position: relative; z-index: 1; }
+
+    .final-message {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      line-height: 2.2;
+      color: var(--text-dim);
+      margin-bottom: 36px;
+    }
+
+    /* ===== 中間CTA ===== */
+    .mid-cta {
+      text-align: center;
+      padding: 48px 20px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ===== 星のアニメーション ===== */
+    .stars {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      animation: twinkle var(--duration) ease-in-out infinite;
+      opacity: 0;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; }
+      50% { opacity: var(--max-opacity); }
+    }
+
+    /* ===== フッター ===== */
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ===== スクロールアニメーション ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== 固定CTAバー（スマホ） ===== */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10,6,18,0.95);
+      backdrop-filter: blur(12px);
+      padding: 12px 20px;
+      z-index: 100;
+      text-align: center;
+      border-top: 1px solid rgba(107,33,168,0.2);
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .sticky-cta.show { transform: translateY(0); }
+
+    .sticky-cta .cta-btn {
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 星の背景 -->
+<div class="stars" id="stars"></div>
+
+<!-- ===== ヒーロー ===== -->
+<header class="hero">
+  <div class="hero-badge serif">縁結び祈祷師</div>
+  <h1>
+    あの人の本音、<br>
+    <span class="gold">10秒で分かります。</span>
+  </h1>
+  <p class="hero-sub">
+    縁結び祈祷師・黒華が<br>
+    あなたとあの人の縁を霊視します
+  </p>
+  <a href="YOUR_LINE_URL" class="cta-btn" id="hero-cta">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    今すぐ10秒診断する
+  </a>
+  <p class="cta-note">完全無料・登録10秒</p>
+</header>
+
+<!-- ===== 悩み共感 ===== -->
+<section class="pain-section fade-in">
+  <h2 class="section-title">
+    こんなお悩み、<br>
+    <span class="gold">ありませんか？</span>
+  </h2>
+  <ul class="pain-list">
+    <li>音信不通の彼からの連絡を、ずっと待ち続けている</li>
+    <li>LINEをブロックされてしまった</li>
+    <li>別れた彼と、もう一度やり直したい</li>
+    <li>片思いの彼に振り向いてもらいたい</li>
+    <li>「この歳で恋愛なんて」と、誰にも相談できない</li>
+    <li>彼の本当の気持ちが分からなくて、毎日不安</li>
+  </ul>
+  <p class="pain-question">
+    一人で抱え込んでいませんか？<br>
+    もう、大丈夫です。
+  </p>
+</section>
+
+<!-- ===== 実績 ===== -->
+<section class="fade-in">
+  <h2 class="section-title">
+    これまで<span class="gold">多くの方</span>に<br>
+    ご相談いただきました
+  </h2>
+  <div class="stats">
+    <div class="stat-card" style="flex:none;width:60%;">
+      <span class="stat-number">2,800<small style="font-size:0.6em">名以上</small></span>
+      <span class="stat-label">ご相談実績</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 中間CTA ===== -->
+<div class="mid-cta fade-in">
+  <a href="YOUR_LINE_URL" class="cta-btn">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    今すぐ10秒診断する
+  </a>
+</div>
+
+<!-- ===== お客様の声 ===== -->
+<section class="fade-in">
+  <h2 class="section-title">
+    鑑定を受けた方の<br>
+    <span class="gold">お声</span>
+  </h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <span class="testimonial-tag">復縁</span>
+      <p>半年間、一切連絡がなかった元彼から突然LINEが届きました。「ずっと後悔してた。もう一度やり直したい」と。黒華先生の鑑定を受けていなかったら、きっと諦めていたと思います。</p>
+      <div class="testimonial-attr">40代女性</div>
+    </div>
+    <div class="testimonial">
+      <span class="testimonial-tag">音信不通</span>
+      <p>ブロックされて3ヶ月。もう終わったと思っていました。鑑定の翌週、突然ブロックが解除されて「話がしたい」とメッセージが。信じられませんでした。</p>
+      <div class="testimonial-attr">30代女性</div>
+    </div>
+    <div class="testimonial">
+      <span class="testimonial-tag">片思い</span>
+      <p>2年間ずっと友達のままだった彼。鑑定で「彼はあなたの気持ちに気づいています」と言われた数日後、「俺、お前のこと友達として見れなくなってる」と告白されました。</p>
+      <div class="testimonial-attr">30代女性</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== プロフィール ===== -->
+<section class="profile-section fade-in">
+  <div class="divider"></div>
+  <div class="profile-icon serif">黒華</div>
+  <div class="profile-name serif">黒華（くろは）</div>
+  <div class="profile-title">縁結び祈祷師</div>
+  <p class="profile-text">
+    これまで2,800名以上の方の<br>
+    恋愛のお悩みに寄り添ってきました。<br><br>
+    復縁、音信不通、片思い、<br>
+    誰にも言えない想い。<br><br>
+    どんな状況でも、<br>
+    縁がある限り道はあります。<br><br>
+    あなたの恋が叶うまで、<br>
+    私がそばで見守り続けます。
+  </p>
+  <p class="profile-quote">
+    「一人で頑張らなくて大丈夫。<br>
+    あなたは愛される価値があります。」
+  </p>
+</section>
+
+<!-- ===== 鑑定内容 ===== -->
+<section class="fade-in">
+  <h2 class="section-title">
+    10秒診断で<br>
+    <span class="gold">分かること</span>
+  </h2>
+  <div class="reading-items">
+    <div class="reading-item">
+      <div class="reading-item-icon">💜</div>
+      <div class="reading-item-text">あの人の今の本当の気持ち</div>
+    </div>
+    <div class="reading-item">
+      <div class="reading-item-icon">✨</div>
+      <div class="reading-item-text">二人の縁の状態</div>
+    </div>
+    <div class="reading-item">
+      <div class="reading-item-icon">🌙</div>
+      <div class="reading-item-text">今あなたがすべきこと</div>
+    </div>
+  </div>
+  <div class="free-badge serif">完全無料</div>
+</section>
+
+<!-- ===== 最終CTA ===== -->
+<div class="final-cta fade-in">
+  <p class="final-message">
+    あなたがここに辿り着いたのは<br>
+    偶然ではありません。<br><br>
+    一人で悩む時間は、もう終わりです。<br><br>
+    たった10秒で、<br>
+    あの人の本音が分かります。
+  </p>
+  <a href="YOUR_LINE_URL" class="cta-btn">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    今すぐ10秒診断する
+  </a>
+  <p class="cta-note">完全無料・登録10秒</p>
+</div>
+
+<footer>
+  <p>&copy; 2026 縁結び祈祷師 黒華</p>
+</footer>
+
+<!-- 固定CTAバー -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="YOUR_LINE_URL" class="cta-btn">
+    <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    今すぐ10秒診断する
+  </a>
+</div>
+
+<script>
+// 星の背景生成
+(function() {
+  const container = document.getElementById('stars');
+  for (let i = 0; i < 60; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.setProperty('--duration', (3 + Math.random() * 5) + 's');
+    star.style.setProperty('--max-opacity', (0.3 + Math.random() * 0.5).toString());
+    star.style.animationDelay = Math.random() * 5 + 's';
+    if (Math.random() > 0.7) {
+      star.style.width = '3px';
+      star.style.height = '3px';
+    }
+    container.appendChild(star);
+  }
+})();
+
+// スクロールアニメーション
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// 固定CTAバーの表示制御
+const stickyCta = document.getElementById('stickyCta');
+const heroCta = document.getElementById('hero-cta');
+
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      stickyCta.classList.remove('show');
+    } else {
+      stickyCta.classList.add('show');
+    }
+  });
+}, { threshold: 0 });
+
+heroObserver.observe(heroCta);
+</script>
+
+</body>
+</html>
